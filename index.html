@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +8,23 @@
 </head>
 <body>
     <div class="container">
-        <form class="portfolio-form">
-            <header>
-                <h1>My Portfolio</h1>
-            </header>
-            <section id="about">
-                <h2>About Me</h2>
+        <form class="portfolioform">
+            <nav class="navbar">
+                <div class="container">
+                    <h1 class="logo">My Portfolio</h1>
+                    <ul class="nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <section id="about" class="portfolio-section">
+                <h2><u>About Me</u></h2>
                 <p>Name: Henry Reyes Chantioco</p>
                 <p>Birthday: July 27, 2003</p>
                 <p>Hobbies
@@ -25,32 +35,47 @@
                         <li>Reading books/mangas</li>
                     </ul>
                 </p>
-                <p>Name: Henry Reyes Chantioco</p>
             </section>
-            <section id="education">
-                <h2>Education</h2>
-                <p>Add your educational background here.</p>
+            <section id="education" class="portfolio-section">
+                <h2><u>Education</u></h2>
+                <p>I studied elemetary at <u>Don Bosco</u>.</p>
+                <p>I studied High School at <u>SLU-LHS(Saint Louis University - Laboratory High School)</u>.</p>
             </section>
-            <section id="experience">
-                <h2>Experience</h2>
-                <p>Describe your work experience.</p>
+            <section id="experience" class="portfolio-section">
+                <h2><u>Experience</u></h2>
+                <p>I dont have much experience but I have been introduced into different coding platforms & languages such as Java, Python, Html, etc.</p>
             </section>
-            <section id="skills">
-                <h2>Skills</h2>
+            <section id="skills" class="portfolio-section">
+                <h2><u>Skills</u></h2>
                 <p>List your skills here.</p>
             </section>
-            <section id="projects">
-                <h2>Projects</h2>
-                <p>Showcase your projects.</p>
+            <section id="projects" class="portfolio-section">
+                <h2><u>Projects</u></h2>
+                <p>My projects
+                    <ul class="proj">
+                        <li class="proj"><a href="https://henchants.github.io/survey/">Survey form</a></li>
+                        <li class="proj"><a href="https://henchants.github.io/landing/">Landing page</a></li>
+                        <li class="proj"><a href="https://henchants.github.io/documentation/">Documentation</a></li>
+                        <li class="proj"><a href="https://henchants.github.io/tribute/">Tribute</a></li>
+                        <li class="proj"><a href="https://henchants.github.io/sns/">Sneaks and Scissors initial website</a></li>
+                    </ul>
+
+                <p>This is my <a href="https://github.com/henchants">Github</a> profile if you would like to look at more of my works</p>
+                </p>
             </section>
-            <section id="contact">
-                <h2>Contact Information</h2>
-                <p>Provide ways to contact you.</p>
+            <section id="contact" class="portfolio-section">
+                <h2><u>Contact Information</u></h2>
+                <ul>
+                    <li class="proj"><u>Gmail:</u> henchants@gmail.com</li>
+                    <li class="proj"><a href="https://www.facebook.com/hen.chants">Facebook/Messenger</a></li>
+                    <li class="proj"><a href="https://github.com/henchants">This is my <u>Github</u></a></li>
+                </ul>
             </section>
             <footer>
                 <p>&copy; 2024 My Portfolio</p>
             </footer>
         </form>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
     </div>
     <script src="script.js"></script>
 </body>

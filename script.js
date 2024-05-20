@@ -1,37 +1,36 @@
-// Smooth Scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+// script.js for my index for refresher act
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll('.nav-links a');
+
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            // Hide lahat ng sections
+            const sections = document.querySelectorAll('.portfolio-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // target section na sa display
+            targetSection.style.display = 'block';
         });
     });
 });
-
-// Form Validation
-document.getElementById('contact-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    // Clear previous messages
-    const errorElement = document.getElementById('form-error');
-    errorElement.textContent = '';
-
-    // Validation logic
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    if (name === '' || email === '' || message === '') {
-        errorElement.textContent = 'All fields are required!';
-    } else if (!validateEmail(email)) {
-        errorElement.textContent = 'Please enter a valid email address!';
-    } else {
-        alert('Form submitted successfully!');
-        document.getElementById('contact-form').reset();
-    }
+// even listener ng darkmode toggle
+document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+    // Toggle ng dark mode sa body element
+    document.body.classList.toggle('dark-mode');
+    
+    // Save user preference ng darkmode
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDarkMode);
 });
 
-function validateEmail(email) {
-    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return re.test(String(email).toLowerCase());
+// Check if nagdarkmode user before
+const isDarkMode = localStorage.getItem('darkMode');
+if (isDarkMode === 'true') {
+    document.body.classList.add('dark-mode');
 }
