@@ -79,12 +79,12 @@ section {
 }
 
 a {
-    color: rgb(0, 0, 0);
+    color: rgb(0, 38, 255);
     text-decoration: underline;
 }
 
 a:hover {
-    color: rgb(0, 102, 255);
+    color: rgb(255, 68, 68);
     text-decoration: none;
 }
 
